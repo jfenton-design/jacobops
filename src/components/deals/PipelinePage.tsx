@@ -120,7 +120,7 @@ export function PipelinePage() {
       </div>
 
       {/* Stats strip */}
-      <div className="flex border-b shrink-0 divide-x" style={{ borderColor: 'var(--border)', divideColor: 'var(--border)' }}>
+      <div className="flex border-b shrink-0 divide-x" style={{ borderColor: 'var(--border)' }}>
         {[
           { label: 'Active', value: String(active.length), color: 'var(--accent2)' },
           { label: 'Avg Score', value: String(avgScore), color: 'var(--accent)' },
