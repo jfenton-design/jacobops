@@ -305,7 +305,7 @@ function ScoringTab({ deal, categories, onUpdate }: { deal: any; categories: any
 
 // ── Diligence Tab ──────────────────────────────────────────────────────────
 function DiligenceTab({ deal, onUpdate }: { deal: any; onUpdate: (s: DealMilestoneStatus) => void }) {
-  const categories = [...new Set(DEFAULT_MILESTONES.map(m => m.category))]
+  const categories = Array.from(new Set(DEFAULT_MILESTONES.map(m => m.category)))
   const completed = deal.milestones.filter((m: any) => m.status === 'completed').length
   const total = deal.milestones.length
   const pct = Math.round((completed / total) * 100)
